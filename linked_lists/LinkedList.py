@@ -2,8 +2,6 @@
 
 # In a singly linked list, we have an ordered list of items as individual Nodes that have pointers to other Nodes.
 
-from Nodes import Node
-
 
 class LinkedList(object):
     def __init__(self):
