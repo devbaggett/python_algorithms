@@ -65,3 +65,12 @@ class TestUnique(object):
         assert_equal(sol('goo'), False)
         assert_equal(sol('abcdefg'), True)
         print('ALL TEST CASES PASSED')
+
+
+class TestBalanceCheck(object):
+
+    def test(self, sol):
+        assert_equal(sol('[](){([[[]]])}('), False)
+        assert_equal(sol('[{{{(())}}}]((()))'), True)
+        assert_equal(sol('[[[]])]'), False)
+        print('ALL TEST CASES PASSED')
