@@ -7,8 +7,11 @@ class Node(object):
         self.value = value
         self.next = None
 
+    def __str__(self):
+        return f"\nValue: {self.value}, Next: {self.next}"
 
-class DLLNode(Object):
+
+class DLLNode(object):
     def __init__(self, value):
         self.value = value
         self.next = None
