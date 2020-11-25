@@ -43,9 +43,20 @@ def pair_sum2(arr, k):
     return len(output)
 
 
+def pair_sum3(array, k):
+    pairs = set()
+    for i in array:
+        for j in array:
+            if i + j == k:
+                pair = tuple(sorted((i, j)))
+                pairs.add(pair)
+
+    return len(pairs)
+
+
 # pair_sum2([1, 3, 2, 2], 4) # 2
 # pair_sum([1, 2, 3, 1], 3) # 1
 
 # Run tests
 t = TestPair()
-t.test(pair_sum2)
+t.test(pair_sum3)
